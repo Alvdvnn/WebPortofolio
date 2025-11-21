@@ -1,8 +1,15 @@
 @import "tailwindcss";
 
+/* ------------------------------------
+   BASE ROOT COLORS
+------------------------------------ */
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Spotlight position (default center) */
+  --x: 50%;
+  --y: 50%;
 }
 
 @theme inline {
@@ -19,8 +26,40 @@
   }
 }
 
+/* ------------------------------------
+   BODY STYLE
+------------------------------------ */
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Tailwind utilities */
+@tailwind utilities;
+
+/* ------------------------------------
+   HIDE DEFAULT CURSOR
+------------------------------------ */
+body, html {
+  cursor: none;
+}
+
+a, button {
+  cursor: none;
+}
+
+/* ------------------------------------
+   SPOTLIGHT EFFECT
+------------------------------------ */
+.spotlight {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      circle at var(--x) var(--y),
+      rgba(255, 255, 255, 0.09),
+      transparent 45%
+  );
+  transition: background 0.12s ease-out;
+  pointer-events: none;
 }
