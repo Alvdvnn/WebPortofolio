@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   // Diperbarui agar sesuai proyek Anda
-  title: "Devin Alvaro Portfolio",
+  title: "Devin Alfaro Portfolio",
   description: "Web Development Enthusiast",
 };
 
