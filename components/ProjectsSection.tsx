@@ -46,17 +46,17 @@ const allProjects: Project[] = [
     title: "Galley-la Halls",
     description:
       "A surreal 3D anomaly exploration game set within a distorted art museum. Built in Unity, this atmospheric experience challenges players to identify subtle anomalies amidst shifting hallways and uncanny lighting effects.",
-    imageUrl: "/GameDev.jfif",
+    imageUrl: "/Galleyla.jpg",
     tags: ["Game Dev", "Unity", "C#", "3D Level Design"],
     liveUrl: "https://drive.google.com/file/d/1-pPK1i3Dyo_IZeOhpORP654TRpb_Sgyv/view",
-    githubUrl: "#", // Link ke Repo Game
+    githubUrl: "#",
     type: "informatics",
   },
   {
     title: "Tuku! - Coffee Ordering App",
     description:
       "A native Android application designed to digitize the coffee shop experience. Features real-time order tracking, seamless menu browsing, and an optimized queue management system built with Kotlin and Firebase.",
-    imageUrl: "/TUKU.jfif",
+    imageUrl: "/KopiTuku.jpg",
     tags: ["Android Dev", "Kotlin", "Firebase", "MVVM"],
     liveUrl: "#",
     githubUrl: "https://github.com/shavellegau/map_umkm",
@@ -66,7 +66,7 @@ const allProjects: Project[] = [
     title: "Aloha Guest House",
     description:
       "A dynamic boarding house management platform built with Laravel. Provides prospective tenants with a seamless interface to browse room availability and facilities, while empowering owners with a robust backend for data management.",
-    imageUrl: "/Aloha.jfif",
+    imageUrl: "/Alo.jpg",
     tags: ["Fullstack Web", "Laravel", "PHP", "Tailwind CSS"],
     liveUrl: "https://www.figma.com/design/UdFZkrCnTgPPd4XSB5Pq9U/webprog-project?node-id=1-4&p=f&t=UotG1GXGbehzkrqZ-0",
     githubUrl: "https://github.com/rascalosh/uaswebprog",
