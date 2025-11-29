@@ -16,13 +16,14 @@ export default function CustomCursor() {
   }, []);
 
   return (
-    // --- PERBAIKAN DI SINI: Tambahkan 'hidden md:block' ---
-    // Ini akan menyembunyikan cursor custom di layar sentuh/kecil
+    // Tambahkan 'hidden md:block' agar cursor hilang di HP (Touchscreen)
     <div className="hidden md:block">
       
       {/* 1. Blob Luar (Flowy) */}
       <div
-        className="fixed w-8 h-8 bg-white rounded-full z-50 pointer-events-none mix-blend-difference"
+        // PERBAIKAN DI SINI:
+        // Ubah 'z-50' menjadi 'z-[9999]' agar selalu di atas modal apapun
+        className="fixed w-8 h-8 bg-white rounded-full z-[9999] pointer-events-none mix-blend-difference"
         style={{
           transform: `translate(${position.x - 16}px, ${position.y - 16}px)`,
           transition: 'transform 0.15s ease-out', 
@@ -31,7 +32,9 @@ export default function CustomCursor() {
       
       {/* 2. Titik Dalam (Mengikuti langsung) */}
       <div
-        className="fixed w-2 h-2 bg-white rounded-full z-50 pointer-events-none mix-blend-difference"
+        // PERBAIKAN DI SINI JUGA:
+        // Ubah 'z-50' menjadi 'z-[9999]'
+        className="fixed w-2 h-2 bg-white rounded-full z-[9999] pointer-events-none mix-blend-difference"
         style={{
           transform: `translate(${position.x - 4}px, ${position.y - 4}px)`,
         }}

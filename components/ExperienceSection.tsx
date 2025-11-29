@@ -6,39 +6,39 @@ import { motion, useScroll, useTransform } from "framer-motion";
 // --- DATA LEARNING PATH ---
 const learningPath = [
   { 
-    phase: "The Foundation", 
-    stack: "HTML, CSS, & JavaScript Basic", 
-    year: "2021" 
-  },
-  { 
-    phase: "Modern Styling & Responsive", 
-    stack: "Tailwind CSS & Bootstrap", 
-    year: "Early 2022" 
-  },
-  { 
-    phase: "JavaScript Mastery", 
-    stack: "ES6+, DOM Manipulation, Fetch API", 
-    year: "Mid 2022" 
-  },
-  { 
-    phase: "Entering React Ecosystem", 
-    stack: "React.js, Hooks, Redux", 
-    year: "Late 2022" 
-  },
-  { 
-    phase: "Fullstack Framework", 
-    stack: "Next.js 13/14 (App Router)", 
+    phase: "Web Fundamentals", 
+    stack: "HTML, CSS, & Semantic Layouts", 
     year: "2023" 
   },
   { 
-    phase: "Type Safety & Scalability", 
-    stack: "TypeScript & Zod", 
+    phase: "Database Architecture", 
+    stack: "SQL, ERD, & 3NF Normalization", 
     year: "2024" 
   },
   { 
-    phase: "Motion & Interactive UI", 
-    stack: "Framer Motion, Three.js, GSAP", 
-    year: "2025 - Present" 
+    phase: "Dynamic Web Apps", 
+    stack: "Laravel, MVC, & API Integration", 
+    year: "2024" 
+  },
+  { 
+    phase: "UI/UX & User Research", 
+    stack: "Figma, User Flows, & Prototyping", 
+    year: "2024" 
+  },
+  { 
+    phase: "Data Analytics", 
+    stack: "Regression Analysis & Data Cleaning", 
+    year: "2024" 
+  },
+  { 
+    phase: "Mobile Apps Developer", 
+    stack: "Kotlin, React Native & Mobile UI Principles", 
+    year: "2025" 
+  },
+  { 
+    phase: "Game Developer", 
+    stack: "Unity 6, C#, & 3D Game Logic", 
+    year: "2025" 
   },
 ];
 

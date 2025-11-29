@@ -39,23 +39,23 @@ export default function ContactSection() {
           {[
             {
               label: "Email",
-              href: "mailto:devinalfaro13@gmail.com",
-              value: "devinalfaro13@gmail.com",
+              href: "mailto:fransiskusdevinalfaro@gmail.com",
+              value: "fransiskusdevinalfaro@gmail.com",
             },
             {
               label: "WhatsApp",
-              href: "https://wa.me/6283159755013",
-              value: "+62 831 5975 5013",
+              href: "https://wa.me/6285283744288",
+              value: "+62 852 8374 4288",
             },
             {
               label: "Instagram",
-              href: "https://instagram.com/fransiskus.dev",
-              value: "@fransiskus.dev",
+              href: "https://www.instagram.com/alvdvnn/",
+              value: "@alvdvnn",
             },
             {
               label: "GitHub",
-              href: "https://github.com/devinnotfound",
-              value: "github.com/devinnotfound",
+              href: "https://github.com/Alvdvnn",
+              value: "github.com/Alvdvnn",
             },
           ].map((item) => (
             <motion.div

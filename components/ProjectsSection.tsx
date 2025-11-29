@@ -23,53 +23,103 @@ interface Project {
 
 const allProjects: Project[] = [
   {
-    title: "Satu.In - Money Tracker",
+    title: "Tanda Seru! - Hangout Finder",
     description:
-      "A mobile application for automatically tracking expenses...",
-    imageUrl: "/GeminiWarna.pn",
-    tags: ["Mobile App", "Fintech", "React Native", "Qris API"],
-    liveUrl: "#",
-    githubUrl: "#",
+      "A mobile-first discovery platform tailored for Gen-Z to find the perfect hangout spots. Features personalized filtering by ambience, budget, and vibes within a clean, intuitive interface.",
+    imageUrl: "/Tanda Seru.jpg", 
+    tags: ["UI/UX Design", "Figma", "Mobile App", "Prototyping"],
+    liveUrl: "https://www.figma.com/proto/KSx1oF6MaIA0siGI0boriF/Tanda-Seru-?node-id=776-5220&starting-point-node-id=776%3A5220&t=iitCfSEsXzvc6Sdp-1", 
+    githubUrl: "https://www.figma.com/design/KSx1oF6MaIA0siGI0boriF/Tanda-Seru-?node-id=13-123&t=a8g3jYQybZmaT6jO-1", 
     type: "informatics",
   },
   {
-    title: "MAP UMKM",
+    title: "DANG - Reservation Platform",
     description:
-      "A web application designed to map and showcase local SMEs...",
-    imageUrl: "/GeminiHitam.pn",
-    tags: ["Web App", "Next.js", "Tailwind CSS", "Maps API"],
-    liveUrl: "#",
-    githubUrl: "#",
+      "A high-fidelity web platform designed to streamline reservations for local SMEs. Prioritizes optimized booking workflows, clear visual hierarchy, and accessibility to connect users with business owners effortlessly.",
+    imageUrl: "/DANG.jpg",
+    tags: ["UI/UX Design", "Figma", "Wireframing", "Accessibility"],
+    liveUrl: "https://www.figma.com/proto/QDEPwhkvfJU6MDpLK5Onyd/D.A.N.G?node-id=355-616&starting-point-node-id=355%3A616&scaling=scale-down&content-scaling=fixed&t=PqNbaL2kmWP1pwbq-1",
+    githubUrl: "https://www.figma.com/design/QDEPwhkvfJU6MDpLK5Onyd/D.A.N.G?node-id=0-1&t=Ym9HJruLyHvmDEHy-1",
     type: "informatics",
   },
   {
-    title: "Anomaly Game (Unity)",
+    title: "Galley-la Halls",
     description:
-      "A horror/puzzle game inspired by 'Exit 8', built in Unity...",
-    imageUrl: "/GeminiWarna.pn",
-    tags: ["Game Dev", "Unity 6", "C#", "3D Modeling"],
-    liveUrl: "#",
-    githubUrl: "#",
+      "A surreal 3D anomaly exploration game set within a distorted art museum. Built in Unity, this atmospheric experience challenges players to identify subtle anomalies amidst shifting hallways and uncanny lighting effects.",
+    imageUrl: "/GameDev.jfif",
+    tags: ["Game Dev", "Unity", "C#", "3D Level Design"],
+    liveUrl: "https://drive.google.com/file/d/1-pPK1i3Dyo_IZeOhpORP654TRpb_Sgyv/view",
+    githubUrl: "#", // Link ke Repo Game
     type: "informatics",
   },
   {
-    title: "Ketua Divisi - Himpunan Mahasiswa",
+    title: "Tuku! - Coffee Ordering App",
     description:
-      "Memimpin divisi Humas, bertanggung jawab atas komunikasi ...",
-    imageUrl: "/GeminiHitam.pn",
-    tags: ["Leadership", "Event Management", "Public Speaking"],
+      "A native Android application designed to digitize the coffee shop experience. Features real-time order tracking, seamless menu browsing, and an optimized queue management system built with Kotlin and Firebase.",
+    imageUrl: "/TUKU.jfif",
+    tags: ["Android Dev", "Kotlin", "Firebase", "MVVM"],
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/shavellegau/map_umkm",
+    type: "informatics",
+  },
+  {
+    title: "Aloha Guest House",
+    description:
+      "A dynamic boarding house management platform built with Laravel. Provides prospective tenants with a seamless interface to browse room availability and facilities, while empowering owners with a robust backend for data management.",
+    imageUrl: "/Aloha.jfif",
+    tags: ["Fullstack Web", "Laravel", "PHP", "Tailwind CSS"],
+    liveUrl: "https://www.figma.com/design/UdFZkrCnTgPPd4XSB5Pq9U/webprog-project?node-id=1-4&p=f&t=UotG1GXGbehzkrqZ-0",
+    githubUrl: "https://github.com/rascalosh/uaswebprog",
+    type: "informatics",
+  },
+  {
+    title: "Explore West Kalimantan",
+    description:
+      "A cultural tourism website dedicated to promoting the hidden gems of West Kalimantan. This digital guide offers curated insights into iconic tourist destinations and authentic traditional cuisine, wrapped in an engaging and responsive visual experience.",
+    imageUrl: "/KalimantanBarat.jpg",
+    tags: ["Web Design", "Content Strategy", "HTML/CSS", "Responsive UI"],
+    liveUrl: "https://indahnyakalimantanbarat.vercel.app/",
+    githubUrl: "#", // Link Repo
+    type: "informatics",
+  },
+  {
+    title: "Starlight UMN (Accommodation)",
+    description:
+      "Managed end-to-end logistics for UMN's largest annual talent show. Served as the primary liaison for 12 guest performers and coordinated equipment inventory across 7 divisions to ensure a seamless 1,500+ attendee event.",
+    imageUrl: "/Starlight.jpg",
+    tags: ["Logistics", "Guest Relation", "Problem Solving"],
+    liveUrl: "https://www.linkedin.com/company/starlightumn/",
+    githubUrl: "https://www.instagram.com/p/C2hQPP-PA4s/",
     type: "organization",
   },
   {
-    title: "Asisten Laboratorium - Lab Jaringan",
+    title: "Euforia UMN (Security)",
     description:
-      "Membimbing praktikan dalam konfigurasi jaringan...",
-    imageUrl: "/GeminiWarna.pn",
-    tags: ["Teaching", "Networking", "Server Admin", "Cisco"],
-    liveUrl: "#",
-    githubUrl: "#",
+      "Maintained security and order for a major business event with 2,000+ attendees. Implemented crowd-control strategies, executed de-escalation protocols for conflict resolution, and coordinated rapid emergency responses.",
+    imageUrl: "/Euforia.jpg",
+    tags: ["Security", "Crowd Control", "Risk Management"],
+    liveUrl: "https://www.linkedin.com/company/euforia-umn/", 
+    githubUrl: "https://www.instagram.com/p/DC0sOSdzL65/", 
+    type: "organization",
+  },
+  {
+    title: "UMN Festival (Accommodation)",
+    description:
+      "Oversaw logistics and technical riders for 18 VVIPs across 3 main festival events. Successfully managed asset distribution across 5 campus locations and ensured budget adherence through efficient resource planning.",
+    imageUrl: "/UFest.jpg", // Ganti foto kegiatan UMN Festival
+    tags: ["VVIP Handling", "Budgeting", "Operations"],
+    liveUrl: "https://www.linkedin.com/company/umn-festival-sparta/", 
+    githubUrl: "https://www.instagram.com/p/DEv9qc3ytQc/", 
+    type: "organization",
+  },
+  {
+    title: "Campus Visit UMN (PIC)",
+    description:
+      "Led professional campus tours and presentations for visiting institutions. Acted as the primary face of the university, personalizing visitor experiences and coordinating with internal faculties to showcase academic life.",
+    imageUrl: "/Camvis.jpg", 
+    tags: ["Public Speaking", "Leadership", "Coordination"],
+    liveUrl: "https://www.linkedin.com/company/campus-visit-umn/", 
+    githubUrl: "https://www.instagram.com/p/DFPQ0PCsUXr/", 
     type: "organization",
   },
 ];

@@ -57,7 +57,7 @@ const MarqueeText = ({ items, className, keyPrefix }: { items: string[], classNa
 
 export default function MarqueeHero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const textToType = "Devin Alvaro";
+  const textToType = "Devin Alfaro";
   
   // --- REVISI 1: State baru untuk 'typedText' ---
   const [typedText, setTypedText] = useState("");

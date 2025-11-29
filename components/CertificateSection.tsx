@@ -4,54 +4,59 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { FaTimes } from "react-icons/fa"; // Ikon 'X' untuk tombol close
+import { FaTimes } from "react-icons/fa";
 
-// --- 2. Tipe Data (Opsional, tapi rapi) ---
+// --- 2. Tipe Data ---
 interface Certificate {
   id: number;
   title: string;
   issuer: string;
+  date: string;
+  description: string;
   imageUrl: string;
 }
 
-// --- 3. DATA DUMMY (Ganti dengan sertifikat Anda) ---
+// --- 3. DATA CERTIFICATES ---
 const dummyCertificates: Certificate[] = [
   {
     id: 1,
-    title: "React Advanced Pro",
-    issuer: "Codecademy",
-    imageUrl: "/GeminiWarna.pn", // Ganti dengan path sertifikat Anda
+    title: "HCIA-AI V3.5 Course",
+    issuer: "Huawei Technologies Co.",
+    date: "May 2025",
+    description: "Gained a comprehensive understanding of AI fundamentals, including Machine Learning, Deep Learning, and the Huawei Ascend ecosystem using the MindSpore framework.",
+    imageUrl: "/Huawei2.png", // Pastikan path ini benar di project Anda
   },
   {
     id: 2,
-    title: "Next.js for Experts",
-    issuer: "Vercel Academy",
-    imageUrl: "/GeminiHitam.pn", // Ganti dengan path sertifikat Anda
+    title: "HCIA-openGauss V1.0",
+    issuer: "Huawei Technologies Co.",
+    date: "July 2025",
+    description: "Mastered enterprise-level database management focusing on openGauss architecture, security protocols, performance tuning, and operational maintenance best practices.",
+    imageUrl: "/Huawei1.png",
   },
   {
     id: 3,
-    title: "Framer Motion Masterclass",
-    issuer: "Fireship.io",
-    imageUrl: "/GeminiWarna.pn", // Ganti dengan path sertifikat Anda
+    title: "Introduction to Python",
+    issuer: "Sololearn",
+    date: "May 2025",
+    description: "Established a strong foundation in Python programming, covering core syntax, control flow, functions, and data types for effective problem-solving.",
+    imageUrl: "/Python1.png",
   },
   {
     id: 4,
-    title: "UI/UX Design Principles",
-    issuer: "Google Career Certificates",
-    imageUrl: "/GeminiHitam.pn", // Ganti dengan path sertifikat Anda
+    title: "Intermediate Python",
+    issuer: "Sololearn",
+    date: "May 2025",
+    description: "Advanced proficiency in Python through Object-Oriented Programming (OOP), file handling, exception management, and the implementation of complex data structures.",
+    imageUrl: "/Python2.png",
   },
-  // Tambahkan 2 lagi agar jadi 6 (pas di grid 3-kolom)
   {
     id: 5,
-    title: "Certified JavaScript Developer",
-    issuer: "W3Schools",
-    imageUrl: "/GeminiHitam.pn", // Ganti dengan path sertifikat Anda
-  },
-  {
-    id: 6,
-    title: "Tailwind CSS Essentials",
-    issuer: "Dicoding",
-    imageUrl: "/GeminiWarna.pn", // Ganti dengan path sertifikat Anda
+    title: "Competition on AI",
+    issuer: "Mae Fah Luang University",
+    date: "August 2025",
+    description: "Participated in the Joint International Workshop 2025, developing game prototypes with AI behaviors and collaborating effectively within a cross-cultural team environment.",
+    imageUrl: "/Thai.png",
   },
 ];
 
@@ -61,7 +66,7 @@ export default function CertificateSection() {
 
   return (
     <section id="certificates" className="relative container mx-auto py-24 px-6">
-      
+
       {/* JUDUL */}
       <div className="mb-16 w-full">
         <h1 className="text-center text-5xl md:text-7xl font-bold text-white py-4">
@@ -74,70 +79,90 @@ export default function CertificateSection() {
         {dummyCertificates.map((cert) => (
           <motion.div
             key={cert.id}
-            className="bg-neutral-800 rounded-lg overflow-hidden cursor-pointer group"
+            // PERUBAHAN: layoutId dihapus dari container utama kartu
+            className="bg-neutral-800 rounded-xl overflow-hidden cursor-pointer group border border-neutral-700 hover:border-neutral-500 transition-colors flex flex-col"
             onClick={() => setSelectedCert(cert)} // Buka modal saat diklik
-            layoutId={`certificate-card-${cert.id}`} // Animasi 'shared layout'
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            {/* Gambar Thumbnail */}
-            <div className="w-full h-48 bg-neutral-900 relative">
+            {/* PERUBAHAN: layoutId ditambahkan ke container gambar.
+                Ini kunci agar hanya gambar yang teranimasi membesar. */}
+            <motion.div
+              className="w-full aspect-video bg-neutral-900 relative"
+              layoutId={`certificate-image-${cert.id}`}
+            >
               <Image
                 src={cert.imageUrl}
                 alt={cert.title}
-                layout="fill"
-                objectFit="contain" // 'contain' agar gambar utuh
-                className="group-hover:scale-105 transition-transform duration-300"
+                fill
+                className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
               />
-            </div>
-            {/* Info Teks */}
-            <div className="p-4">
-              <h3 className="text-lg font-bold text-white">{cert.title}</h3>
-              <p className="text-sm text-neutral-400">{cert.issuer}</p>
+            </motion.div>
+
+            {/* Info Teks (Tidak ikut masuk modal) */}
+            <div className="p-6 flex flex-col flex-grow">
+              <div className="flex justify-between items-start mb-2">
+                <h3 className="text-lg font-bold text-white leading-tight">{cert.title}</h3>
+                <span className="text-xs font-mono text-neutral-500 bg-neutral-900 px-2 py-1 rounded whitespace-nowrap ml-2">
+                  {cert.date}
+                </span>
+              </div>
+
+              <p className="text-sm text-sky-400 font-medium mb-3">{cert.issuer}</p>
+
+              <p className="text-sm text-neutral-400 leading-relaxed line-clamp-3">
+                {cert.description}
+              </p>
             </div>
           </motion.div>
         ))}
       </div>
 
-      {/* --- 6. MODAL / LIGHTBOX --- */}
+      {/* --- 6. MODAL / LIGHTBOX IMAGE ONLY --- */}
       <AnimatePresence>
         {selectedCert && (
           <>
-            {/* Backdrop (Klik untuk menutup) */}
+            {/* Backdrop Gelap */}
             <motion.div
-              className="fixed inset-0 bg-black/80 z-50"
+              className="fixed inset-0 bg-black/90 z-50 backdrop-blur-sm"
               onClick={() => setSelectedCert(null)}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             />
 
-            {/* Konten Modal (Gambar yang diperbesar) */}
-            <motion.div
-              className="fixed inset-0 z-50 flex items-center justify-center p-4"
-              layoutId={`certificate-card-${selectedCert.id}`} // Animasi 'shared layout'
+            {/* Konten Modal */}
+            <div
+              className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none"
             >
-              <div className="relative w-full max-w-4xl h-[80vh] bg-neutral-900 p-4 rounded-lg">
+              {/* PERUBAHAN: Container ini sekarang hanya menampung gambar.
+                  layoutId harus sama dengan yang ada di kartu thumbnail. */}
+              <motion.div
+                className="relative w-full max-w-5xl h-[85vh] pointer-events-auto"
+                layoutId={`certificate-image-${selectedCert.id}`}
+              >
+                {/* Gambar Besar */}
                 <Image
                   src={selectedCert.imageUrl}
                   alt={selectedCert.title}
-                  layout="fill"
-                  objectFit="contain" // Tampilkan gambar penuh
+                  fill
+                  className="object-contain" // Pastikan gambar utuh tidak terpotong
+                  priority // Muat prioritas karena ini gambar utama di modal
                 />
-                
+
                 {/* Tombol Close 'X' */}
                 <button
                   onClick={() => setSelectedCert(null)}
-                  className="absolute -top-4 -right-4 bg-white text-black 
-                             rounded-full w-10 h-10 flex items-center 
-                             justify-center text-lg z-10"
+                  className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white
+                             rounded-full w-10 h-10 flex items-center
+                             justify-center text-lg backdrop-blur-md transition-colors z-20"
                 >
                   <FaTimes />
                 </button>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
           </>
         )}
       </AnimatePresence>

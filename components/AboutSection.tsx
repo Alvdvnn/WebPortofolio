@@ -19,13 +19,10 @@ const mySkills = [
 ];
 
 const paragraphs = [
-  "Hi there! I'm a passionate Frontend Developer with a strong interest in creating smooth, interactive, and visually engaging web experiences. I enjoy focusing on micro-interactions and carefully crafted animations that elevate the feel of a website.",
-  "My journey in web development started from curiosity about how websites work, and it quickly evolved into a deep passion. I’ve practiced and learned through countless projects, experiments, and real-world challenges.",
-  "Over the years, I've sharpened my skills in React, Next.js, user interface engineering, and motion design. I love combining aesthetic design with functional code to create experiences that feel natural, smooth, and delightful.",
-  "I believe that great user experiences come from attention to detail: thoughtful spacing, satisfying transitions, high-performance rendering, and interfaces that guide users effortlessly.",
-  "Outside of coding, I enjoy UI/UX research, video editing, storytelling, and creating content to help other developers learn and grow. I also love exploring new modern tools and pushing what frontend can do.",
-  "Every project I build is driven by curiosity and creativity. I'm always excited about exploring new visual styles, motion patterns, and building meaningful digital experiences.",
-  "Thank you for reading. I'm always open to collaborations, new ideas, or simply having great conversations about design, tech, or creativity!",
+  "I’m a Frontend Developer who believes that websites should feel alive, not just functional. My passion lies in bridging the gap between engineering and design, crafting interfaces that are seamless, interactive, and visually stunning.",
+  "Specializing in React, Next.js, and Motion Design, I obsess over micro-interactions and performance. For me, the magic is in the details—thoughtful spacing, fluid transitions, and code that performs as beautifully as it looks.",
+  "Beyond the code, I am a storyteller and active learner. I love exploring UI/UX trends and pushing the boundaries of what modern web technologies can achieve.",
+  "Let's turn complex ideas into effortless digital experiences. I am always open to building something extraordinary together.",
 ];
 
 // =========================================
